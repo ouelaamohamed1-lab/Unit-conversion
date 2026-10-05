@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fast, clean unit converter for temperature, length, mass, volume, speed, time and data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Unit Converter</title>
+</head>
+<body>
+  <button type="button" class="theme" id="theme" aria-label="Switch between light and dark mode">🌙</button>
+
+  <h1 class="title" data-text="Unit Converter">Unit Converter</h1>
+  <p class="subtitle">Pick a category, type a value, and see it converted instantly.</p>
+
+  <div class="tabs" id="tabs" role="group" aria-label="Category"></div>
+
+  <form id="converter-form" autocomplete="off">
+    <div class="field">
+      <label for="value">Value</label>
+      <input type="number" id="value" value="1" step="any" inputmode="decimal">
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label for="from">From</label>
+        <select id="from"></select>
+      </div>
+      <button type="button" class="swap" id="swap" aria-label="Swap units">⇄</button>
+      <div class="field">
+        <label for="to">To</label>
+        <select id="to"></select>
+      </div>
+    </div>
+
+    <p id="result" class="result" aria-live="polite"></p>
+    <p id="formula" class="formula"></p>
+
+    <button type="button" class="btn" id="copy"><span class="btn-txt">Copy result</span></button>
+  </form>
+
+  <footer>Built by Ouelaa Mohamed Said</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
